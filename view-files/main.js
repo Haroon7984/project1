@@ -1,6 +1,6 @@
-const db = require("C:/Users/LEGION/Desktop/log/database");
-const userModel = require("C:/Users/LEGION/Desktop/log/database/models/users");
-const todoModel = require("C:/Users/LEGION/Desktop/log/database/models/todos");
+const db = require("./database");
+const userModel = require("./users");
+const todoModel = require("./todos");
 
 //const mongodb = require('mongodb');
 
