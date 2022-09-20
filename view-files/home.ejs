@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <%- include("partials/header.ejs",{ name: "nikhil" }) %>
+    <h1>its coming form ejs</h1>
+    
+    
+    <h1>its coming form ejs with pic 😊</h1>
+  
+   
+  
+    <form method="post" action="/todo">
+      <input name="todo" placeholder="add todo"/>
+      <input type="submit" value="save"/>
+    </form>
+
+    <h1 class="<%= false ? "this" : "that"  %>"></h1>
+
+    <ul>
+      <% for( var i=0; i< data.length; i++ ){ %>
+
+        <li> <%= data[i].text %> <%= data[i].isRead %> </li>
+        <form method="post" action="/todo/read/<%= data[i].text %>" >
+          <input type="submit" value="read"/>
+        </form>
+        <form method="post" action="/todo/delete/<%= data[i]._id %>" >
+          <input type="submit" value="delete"/>
+        </form>
+      
+      <% } %>
+    </ul>
+  </body>
+
+</html>
